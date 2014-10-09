@@ -16,7 +16,7 @@
 
 			if (flock($fp, LOCK_EX)) { // do an exclusive lock
 			    
-			    $userArray = explode(',', fread($fp, filesize($filename)));
+			    $userArray = explode(',', fread($fp, @filesize($filename)));
 			    
 			    $len = count($userArray);
 
