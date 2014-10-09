@@ -2,7 +2,7 @@
 	session_start();
 
 	if (isset($_SESSION['username'])){
-		header('Location: /comet/index.php');
+		header('Location: /comet/long_polling/index.php');
 	}
 
 	if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
@@ -41,7 +41,7 @@
 
 			fclose($fp);
 
-			header('Location: /comet/index.php');
+			header('Location: /comet/long_polling/index.php');
 
 		}
 		else {
@@ -55,12 +55,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<script src="/baiduhi/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
 	<title>Comet</title>
 </head>
 <body>
 
-	<form action="/comet/reg.php" method="POST"/>
+	<form action="/comet/long_polling/reg.php" method="POST"/>
 		<input type="text" value="" name="username"/>
 		<button id="click1">click1</button>
 	</form>

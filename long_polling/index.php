@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['username'])){
-	header('Location: /comet/reg.php');
+	header('Location: /comet/long_polling/reg.php');
 }
 
 ?>
@@ -10,7 +10,7 @@ if (!isset($_SESSION['username'])){
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<script src="/baiduhi/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
 	<title>Comet</title>
 </head>
 <body>

@@ -3,7 +3,7 @@
 	session_start();
 
 	if (!isset($_SESSION['username'])){
-		header('Location: /comet/reg.php');
+		header('Location: /comet/long_polling/reg.php');
 	}
 
 	$username = $_SESSION['username'];
@@ -40,7 +40,7 @@
 		exit(0);
 	}
 
-	header('Location: /comet/reg.php');
+	header('Location: /comet/long_polling/reg.php');
 
 
 ?>
